@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+	margin:0px;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+.body{
+	background-image:url('background.png');
+	background-size:100% auto;
+}
+
+.background-image{
+	width: 92%;
+	margin: auto;
+	border: 3px white outset;
+}
+
+.background-image img{
+	width:100%;
+}
+
+.row
+{
+    display: table;
+    width: 100%; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.column
+{
+    display: table-cell;
+	color:white;
+	text-align:center;
+	font-size:20px;
+}
+
+.column img{
+	height:19px;
+}
+
+address{
+	width:92%;
+	margin:auto;
+	font-style:normal;
+	margin-bottom: 18px;
+}
+address h5{
+	font-weight:bold;
+	color:white;
+}
+
+address p{
+	color:silver;
+}
+
+address a{
+	color:white;
+}
+
+.accordion {
+  background:linear-gradient(silver, #e4e4e4,silver);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-bottom: 1px silver solid;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.accordian-box{
+	width:92%;
+	margin:auto;
+	border-radius:10px;
+}
+.accordian-box button:first-child{
+	border-radius:10px 10px 0px 0px;
+}
+
+.accordian-box button:last-child{
+	border-radius:0px 0px 10px 10px;
+}
+
+.accordion::after {
+    content: ">";
+    float: right;
+    font-weight: bold;
+    color: gray;
+    font-size: 14px;
+}
+</style>
+</head>
+<body class="body">
+	<div class="row">
+		<div class="column">Back</div>
+		<div class="column">Hotel Details</div>
+		<div class="column">
+			<img src="logo.jpg" alt="logo"/>
+		</div>
+	</div>
+	<div class="background-image">
+		<img src="hotelexterior.jpg" alt="Header Image"/>
+	</div>
+	<address>
+		<h5>Hilton Chicago</h5> 
+		
+		<p>
+			720 South Michigan Avenue<br/>
+			Chicago, South Illinois, 60605
+		</p>
+		<a href="tel:13129224400">1-312-922-4400</a>
+	</address>
+	
+	<div class="accordian-box">
+		<button class="accordion">One</button>
+		<div class="panel">
+		  <p>Section One</p>
+		</div>
+
+		<button class="accordion">Two</button>
+		<div class="panel">
+		  <p>Section Two</p>
+		</div>
+
+		<button class="accordion">Three</button>
+		<div class="panel">
+		  <p>Section Three</p>
+		</div>
+	</div>
+</body>
+</html>
